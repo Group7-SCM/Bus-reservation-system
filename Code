@@ -139,7 +139,7 @@ public class Bus_Reservation_System {
 		System.out.println("Date: " + timenow.toString());
 		System.out.println("Boarding pass for seat number: " + seatnumber);
 		System.out.println("This ticket is non-refundable and non-transferable.");
-		System.out.println("Please be curteous, do not smoke. Enjoy your trip.");
+		System.out.println("Please be curteous, do not smoke in bus. Enjoy your trip!.");
 		System.out.println();
 	}
 }
