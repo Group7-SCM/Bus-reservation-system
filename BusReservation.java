@@ -118,7 +118,7 @@ private static int[] seats = new int[12];
 				System.out.println();
 			}
 
-
+// im new
 			// Reprompt for a choice
 			System.out.print("Please enter 1 for window, 2 for aisle, or 0 to exit: ");
 			choice = s.nextInt();
