@@ -27,6 +27,7 @@ private static int[] seats = new int[12];
        System.out.println("Welcome to the DIC lovin train reservation system!");
        System.out.println("Code ninjas, code newbies, one fabulous DIC ride!");
        System.out.println();
+       //cy
 		
        System.out.println ("Username: ");
        username = input.nextLine();
