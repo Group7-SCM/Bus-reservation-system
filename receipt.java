@@ -18,6 +18,7 @@ public class receipt {
     public receipt(int seatnumber)
     {
         this.seatnumber = seatnumber;
+        //change geetha
     }
     
     Date timenow = new Date();
