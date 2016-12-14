@@ -70,7 +70,7 @@ private static int[] seats = new int[12];
 			if (choice == 1) {
 				seatnumber = bookWindow();
 
-
+//2
 				// No window seats available, try booking an aisle seat for them instead.
 				if (seatnumber == -1) {
 					seatnumber = bookAisle();
