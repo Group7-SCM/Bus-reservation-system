@@ -31,6 +31,8 @@ public class receipt {
 	System.out.println("|\t\tBoarding pass for seat number: " + seatnumber + "\t\t\t|");
 	System.out.println("|\t\tThis ticket is non-refundable and non-transferable.\t|");
         System.out.println("------------------------------------------------------------------------\n");
+	    
+	    //ily change something
 
     }
 }
