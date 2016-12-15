@@ -20,6 +20,7 @@ public class Login {
         this.username = username;
         this.password = password;
         boolean active;
+	 //Najihah_commit_3
     }
 
     public boolean checkPassword()
