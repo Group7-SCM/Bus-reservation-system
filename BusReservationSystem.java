@@ -3,50 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bus.reservation;
+package busreservationsystem;
+
+import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
- * @author Najihah64
+ * @author Qaiyyim
  */
-import java.util.Scanner;
-import java.util.Date;
-
-public class BusReservation {
+public class BusReservationSystem {
 
     /**
      * @param args the command line arguments
      */
-private static int[] seats = new int[12];
-
+    private static int[] seats = new int[12];
     public static void main(String[] args) {
-       String username;
-       String password;
-       
-       Scanner input = new Scanner(System.in);
-       System.out.println("Welcome to the DIC lovin train reservation system!");
-       System.out.println("Code ninjas, code newbies, one fabulous DIC ride!");
-       System.out.println();
-       //cy
+        // TODO code application logic here
+        System.out.println("Welcome to the DIC Bus reservation system!");
+		System.out.println("C Hello!");
+		System.out.println();
 		
-       System.out.println ("Username: ");
-       username = input.nextLine();
-       
-       System.out.println("Password: ");
-       password = input.nextLine();
-       
-       Login login = new Login(username, password);
-       {
-       
 
-        if(login.checkPassword())
-            
-            System.out.println("You are logged in!");
-        else
-            System.out.println("The username and password you entered are incorrect.");
-            
-            
-       }
 		// Lets start by setting all seats equal to 0 (aka Empty)
 		for (int i = 0; i < 12; i++) {
 			seats[i] = 0;
@@ -70,7 +48,7 @@ private static int[] seats = new int[12];
 			if (choice == 1) {
 				seatnumber = bookWindow();
 
-//2
+
 				// No window seats available, try booking an aisle seat for them instead.
 				if (seatnumber == -1) {
 					seatnumber = bookAisle();
@@ -119,18 +97,19 @@ private static int[] seats = new int[12];
 				System.out.println();
 			}
 
-// im new
+
 			// Reprompt for a choice
-			System.out.print("Please enter 1 for window, 2 for aisle, or 0 to exit: ");
+			receipt resit = new receipt(seatnumber);
+                        resit.printreceipit();
+                        
+                        System.out.print("Please enter 1 for window, 2 for aisle, or 0 to exit: ");
 			choice = s.nextInt();
 		}
 
 			
 	}
-
-
-	// This function checks for window seats and returns seat number or -1 if full.
-	private static int bookWindow() {
+    
+    private static int bookWindow() {
 		for (int i = 0; i < 6; i++) {
 			if (seats[i] == 0) {
 				seats[i] = 1;
@@ -139,10 +118,8 @@ private static int[] seats = new int[12];
 		}
 		return -1;
 	}
-
-
-	// This function checks to see if aisle seats were available, -1 if full.
-	private static int bookAisle() {
+    
+    private static int bookAisle() {
 		for (int i = 6; i < 12; i++) {
 			if (seats[i] == 0) {
 				seats[i] = 1;
@@ -152,17 +129,16 @@ private static int[] seats = new int[12];
 		return -1;
 
 	}
-
-
-	// This simply prints out a nice little boarding pass message with their seat number and date of issue.
-	private static void printBoardingPass(int seatnumber) {
+    
+    private static void printBoardingPass(int seatnumber) {
 		Date timenow = new Date();
 		System.out.println();
 		System.out.println("Date: " + timenow.toString());
 		System.out.println("Boarding pass for seat number: " + seatnumber);
 		System.out.println("This ticket is non-refundable and non-transferable.");
-		System.out.println("Please be curteous, do not smoke. Enjoy your trip.");
+		System.out.println("Please be curteous, do not smoke in bus. Enjoy your trip!.");
 		System.out.println();
 	}
-    }
     
+    
+}
