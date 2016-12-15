@@ -29,7 +29,7 @@ public class Login {
             return true;
         else
             return false;
-        //purpose of testing
+        //im understanding
     }
 
     public void deactivateAccount()
