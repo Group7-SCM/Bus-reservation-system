@@ -28,6 +28,7 @@ public class BusReservationSystem {
 		// Lets start by setting all seats equal to 0 (aka Empty)
 		for (int i = 0; i < 12; i++) {
 			seats[i] = 0;
+			seats[i] = 1;
 		}
 
 		// Setup our scanner and default the choice to window.
