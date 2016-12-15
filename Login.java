@@ -35,6 +35,7 @@ public class Login {
     public void deactivateAccount()
     {
         boolean active = false;
+	//najihah_commit_2
     }
 }
 		
